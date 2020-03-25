@@ -2,11 +2,11 @@ server:
   port: 8830
   
 logging:
-    file: demo.log  
+    file: dajiaoyun-community-demo.log  
     
 spring:
   application:
-      name: demo
+      name: dajiaoyun-community-demo
   cloud:
       nacos:
         discovery:
