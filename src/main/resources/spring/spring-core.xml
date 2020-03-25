@@ -25,12 +25,12 @@
 	<!-- spring与mybatis整合配置，扫描所有dao -->
 	<bean id="myBatisMapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />	
-	    <property name="basePackage" value="com.tidy24.xiaoge.api.ee.dao" />
+	    <property name="basePackage" value="com.dajiaoyun.community.lowcoding.ee.dao" />
      </bean>	
-	<bean id="commonService"  class="com.tidy24.xiaoge.api.ee.service.CommonService">
+	<bean id="commonService"  class="com.dajiaoyun.community.lowcoding.ee.service.CommonService">
 		 
 	</bean>	
-	<bean id="buildSQLService"  class="com.tidy24.xiaoge.api.ee.service.BuildSQLHelper">
+	<bean id="buildSQLService"  class="com.dajiaoyun.community.lowcoding.ee.service.BuildSQLHelper">
 		 
 	</bean>	
 	

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.tidy24.xiaoge.api.ee.dao.BaseDAO">
+<mapper namespace="com.dajiaoyun.community.lowcoding.ee.dao.BaseDAO">
 	<select id="find" resultType="java.util.HashMap"
 		parameterType="java.util.HashMap">
 		${sql}

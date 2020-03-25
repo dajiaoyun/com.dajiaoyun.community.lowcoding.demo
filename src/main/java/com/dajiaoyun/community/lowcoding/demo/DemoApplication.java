@@ -22,10 +22,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableTransactionManagement(proxyTargetClass = true)
 @ImportResource(locations = { "classpath:/spring/spring-core.xml", "classpath:druid-bean.xml" })
 
-public class FlowergameApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FlowergameApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 	
 	@Bean

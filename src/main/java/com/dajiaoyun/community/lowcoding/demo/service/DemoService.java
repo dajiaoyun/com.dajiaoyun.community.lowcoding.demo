@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.dajiaoyun.community.lowcoding.demo.dao.TopicDAO;
+import com.dajiaoyun.community.lowcoding.demo.dao.DemoDAO;
 import com.dajiaoyun.community.lowcoding.ee.service.CommonService;
 import com.dajiaoyun.community.lowcoding.ee.util.date.FlexDate;
 import com.dajiaoyun.community.lowcoding.model.TableObject;
@@ -18,17 +18,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = RuntimeException.class)
-public class TopicService  extends CommonService<Object>{
-	private static final Logger log = LoggerFactory.getLogger(TopicService.class);
+public class DemoService  extends CommonService<Object>{
+	private static final Logger log = LoggerFactory.getLogger(DemoService.class);
 	
 	public JSONArray getTopics() {
-		String sql=TopicDAO.getTopics();
+		String sql=DemoDAO.getTopics();
 		JSONArray data=this.queryJSONArray(sql);
 		if(data!=null) {
 			for(int i=0;i<data.size();i++) {
 				JSONObject obj=data.getJSONObject(i);
 				String topicParentId=obj.getString("topic_id");
-				sql=TopicDAO.getTopicLineItems(topicParentId);
+				sql=DemoDAO.getTopicLineItems(topicParentId);
 				JSONArray children=this.queryJSONArray(sql);
 				obj.put("children", children);
 			}

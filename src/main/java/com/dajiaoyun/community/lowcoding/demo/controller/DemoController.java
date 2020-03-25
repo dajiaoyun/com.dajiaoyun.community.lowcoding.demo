@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.dajiaoyun.community.lowcoding.demo.service.TopicService;
+import com.dajiaoyun.community.lowcoding.demo.service.DemoService;
 
 
 @RestController
 @RequestMapping("/demo")
-public class TopicController {
-	private static final Logger log = LoggerFactory.getLogger(TopicController.class);
+public class DemoController {
+	private static final Logger log = LoggerFactory.getLogger(DemoController.class);
 	
 	@Autowired
-	TopicService topicService;
+	DemoService topicService;
 	
 	@RequestMapping(value = "/input", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	@ResponseBody
