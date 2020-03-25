@@ -1,0 +1,20 @@
+server:
+  port: 8830
+  
+logging:
+    file: demo.log  
+    
+spring:
+  application:
+      name: demo
+  cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always

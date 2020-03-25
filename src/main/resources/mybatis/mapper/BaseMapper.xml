@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tidy24.xiaoge.api.ee.dao.BaseDAO">
+	<select id="find" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		${sql}
+	</select>
+	<select id="query" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		${sql}
+	</select>
+	<insert id="insert" 
+		parameterType="java.util.Map">
+		${sql}
+		<!-- 
+		<selectKey resultType="String" order="AFTER" keyProperty="indentid_id">
+			SELECT LAST_INSERT_ID() AS indentid_id
+		</selectKey>
+		 -->
+	</insert>
+	<insert id="batchInsert" parameterType="java.util.Map">
+		${sql}
+	</insert>
+	<update id="update" parameterType="java.util.HashMap">
+		${sql}
+	</update>
+	<delete id="remove" parameterType="java.util.HashMap">
+		${sql}
+	</delete>
+	<select id="execute" parameterType="java.util.HashMap">
+		${sql}
+	</select>
+</mapper>
